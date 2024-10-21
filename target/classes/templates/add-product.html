@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="text-right mt-3">
+        <a th:href="@{/product/getAll}">Click here to see all product</a>
+    </div>
+    <hr>
+    <div class="text-center h3">Add Product</div>
+    <form id="add-product-form" class="was-validated">
+        <div class="form-group">
+            <label for="category-id">Product ID</label>
+            <input type="text" name="product_id" class="form-control is-valid" id="category-id" aria-describedby="emailHelp" placeholder="Enter category id" required>
+        </div>
+        <div class="form-group">
+            <label for="category-name">Product Name</label>
+            <input type="text" name="product_name" class="form-control" id="category-name" placeholder="Category name" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="quantity">Quantity</label>
+                <input type="text" name="quantity" class="form-control" id="quantity" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="price">Price</label>
+                <input type="text" name="price" class="form-control" id="price" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+
+            <select class="custom-select" name="category_id" required>
+                <option value="">Open this select menu</option>
+            </select>
+        </div>
+        <div>
+            <label>Product Image</label>
+            <input type="file" name="product_image" id="product_image" multiple>
+        </div>
+       <div>
+           <a href=""   aria-role="button"><img id="image-receive" src="#" alt="your image" style="width: 250px;height: 200px"/></a>
+       </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary" id="add-product-btn">Add Product</button>
+        </div>
+
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script th:src="@{/js/add-product.js}"></script>
+</body>
+</html>

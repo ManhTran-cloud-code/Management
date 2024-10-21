@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" th:href="@{/css/add-discount.css}">
+</head>
+<body>
+<form id="form_add_discount">
+    <div class="form-group">
+        <label >Ten chuong trinh</label>
+        <input type="text" class="form-control" name="discount_name" placeholder="Ten chuong trinh">
+    </div>
+    <div>
+        <label>Thoi gian ap dung</label>
+        <div class="row">
+            <div class="col">
+                <label>Ngay bat dau</label>
+                <input type="date" name="start_date" id="start_date" class="form-control" placeholder="MM/dd/yyyy">
+            </div>
+            <div class="col">
+                <label>Ngay ket thuc</label>
+                <input type="date" name="end_date" class="form-control" placeholder="MM/dd/yyyy">
+            </div>
+        </div>
+    </div>
+    <div>
+        <label>Loai giam gia</label>
+        <select class="custom-select" name="discount_type" id="discount_type">
+            <option value="0">Open this select menu</option>
+            <option value="1">Giam gia theo phan tram</option>
+            <option value="2">giam gia theo muc</option>
+        </select>
+    </div>
+    <div>
+        <a href="" id="render_product" data-toggle="modal" data-target=".modal_detail">Them san pham</a>
+    </div>
+    <div>
+        <button class="btn btn-danger" id="add_discount_btn">Xac nhan</button>
+    </div>
+</form>
+<!--Modal Here-->
+<div id="myModal" class="modal fade modal_detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="h3 text-center">Order Detail</div>
+            <table class="table table-striped" id="product">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+
+                </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+            <div class="text-center">
+                <a class="btn btn-warning mb-2"  id="check_product_id">Xac Nhan</a>
+                <a class="btn btn-danger ml-3" id="delete_check_product_id">Xoa du lieu</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script th:src="@{/js/add-discount.js}"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<main class="container">
+
+    <div class="row">
+    <div class="left-column col-4">
+        <img data-image="black" th:src="@{'/images/product/'+${product.image}}" alt="">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column col-6">
+         <form id="add_to_cart_form">
+        <!-- Product Description -->
+        <div class="product-description">
+            <span>Clother</span>
+            <input type="hidden" name="product_Id" id="product_id" th:value="${product.id}"></input>
+            <h1 id="product_name" th:text="${product.name}"></h1>
+            <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+            <!-- Pizza Quantity-->
+            <div class="form-group">
+                <div>Quantity</div>
+                <div class="input-group quantity-selector quantity-selector-sm">
+                    <input type="number" id="quantity" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="0" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+                </div>
+            </div>
+
+            <!-- Cable Configuration -->
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+            <span th:text="${product.price}"></span>
+        </div>
+        <button class="btn btn-danger" id="buy_btn">Add to cart</button>
+         </form>
+    </div>>
+    </div>
+</main>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script th:src="@{/js/product-detail.js}"></script>
+</body>
+</html>

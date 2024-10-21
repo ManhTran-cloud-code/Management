@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/35320515-e6b7-4ffe-a9d4-92da7e03b329/console.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/AuthorityRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/CartRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/CategoryRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/DiscountDetailRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/OrderItemRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/OrderRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/ProductRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/UserDetailRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/manh/com/project/SaleManagement/repositories/UserRepository.java" dialect="GenericSQL" />
+  </component>
+</project>
